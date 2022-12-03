@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:vet_digital/src/modules/home/data/model/katalog_model.dart';
 import 'package:vet_digital/src/modules/news/news.dart';
+
+import '../../../information/data/models/katalog_model.dart';
+
 
 class NewsList extends StatelessWidget {
   const NewsList(this.items, {super.key});

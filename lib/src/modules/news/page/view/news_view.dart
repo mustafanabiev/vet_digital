@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:vet_digital/src/modules/vet/page/logic/cubit/news_info_cubit.dart';
 
 import '../../../../utils/components/components.dart';
-import '../logic/cubit/info_about_app_cubit.dart';
 import '../widgets/new_list.dart';
 
 class NewsView extends StatelessWidget {

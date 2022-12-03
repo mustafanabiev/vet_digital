@@ -7,7 +7,8 @@ import 'package:vet_digital/src/modules/information/information.dart';
 import '../../../app/theme/colors/app_colors.dart';
 import '../../connection/connection.dart';
 import '../../news/news.dart';
-import '../../news/page/logic/cubit/info_about_app_cubit.dart';
+import '../../news/page/logic/cubit/news_info_cubit.dart';
+import '../../vet/page/logic/cubit/news_info_cubit.dart';
 import '../../vet/page/page.dart';
 
 class HomePage extends StatelessWidget {
@@ -43,11 +44,17 @@ class HomeView extends StatelessWidget {
     // ignore: use_build_context_synchronously
     context.read<HomeCubit>().change(page);
     // ignore: use_build_context_synchronously
+    // context.read<InfoAboutAppCubit>().getVetInfo('HazfNNbTObVEBx9ie3FP');
+    // ignore: use_build_context_synchronously
     context.read<InfoAboutAppCubit>().getKatalog('katalog');
+    // ignore: use_build_context_synchronously
+    context.read<InfoNewsCubit>().getVetInfo('HazfNNbTObVEBx9ie3FP');
+    // context.read<InfoAboutAppCubit>().getVetInfo('HazfNNbTObVEBx9ie3FP');
   }
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,

@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:get_it/get_it.dart';
-import 'package:vet_digital/src/modules/home/data/service/firestore.dart';
-
-import 'modules/home/data/repositories/info_repo.dart';
-import 'modules/news/page/logic/cubit/info_about_app_cubit.dart';
+import 'package:vet_digital/src/modules/vet/page/logic/cubit/news_info_cubit.dart';
+import 'modules/information/data/data.dart';
+import 'modules/information/data/source/firestore.dart';
+import 'modules/news/page/logic/cubit/news_info_cubit.dart';
 
 final sl = GetIt.instance;
 
@@ -20,6 +20,11 @@ Future<void> init() async {
     // cubit
     ..registerLazySingleton(
       () => InfoAboutAppCubit(
+        infoRepo: sl<InfoRepo>(),
+      ),
+    )
+    ..registerLazySingleton(
+      () => InfoNewsCubit(
         infoRepo: sl<InfoRepo>(),
       ),
     )
