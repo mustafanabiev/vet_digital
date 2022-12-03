@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../../app/theme/theme.dart';
 import '../../information.dart';
-import '../logic/cubit/info_about_app_cubit.dart';
 
 
 class MenuList extends StatelessWidget {
@@ -35,8 +34,8 @@ class MenuList extends StatelessWidget {
                 context,
                 // ignore: inference_failure_on_instance_creation
                 MaterialPageRoute(
-                  builder: (context) => const InfoView(),
-                  // builder: (context) => InfoView(infoModel: info.infoModel!),
+                  // builder: (context) => const InfoView(),
+                  builder: (context) => InfoView(infoModel: info.infoModel!),
                 ),
               );
 

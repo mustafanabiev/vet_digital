@@ -9,24 +9,14 @@ part 'info_about_app_state.dart';
 class InfoAboutAppCubit extends Cubit<InfoAboutAppState> {
   InfoAboutAppCubit({
     required this.infoRepo,
-  }) : super(LoadingInfoAboutAppState());
+  }) : super(LoadingState());
   final InfoRepo infoRepo;
 
-  Future<void> getAboutApp(String documentName) async {
-    emit(LoadingInfoAboutAppState());
-
-    final infoAboutApp = await infoRepo.getAboutApp(documentName: documentName);
-
-    infoAboutApp.fold(
-      (error) => emit(const UserFailureState('')),
-      (infoAboutApp) => emit(LoadedAboutAppState(infoAboutApp)),
-    );
-  }
-
   Future<void> getKatalog(String collectionName) async {
-    emit(LoadingInfoAboutAppState());
+    emit(LoadingState());
 
-    final infoKatalog = await infoRepo.getKatalog(collectionName: collectionName);
+    final infoKatalog =
+        await infoRepo.getKatalog(collectionName: collectionName);
 
     infoKatalog.fold(
       (error) => emit(const UserFailureState('')),

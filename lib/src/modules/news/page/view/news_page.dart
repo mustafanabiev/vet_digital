@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:vet_digital/src/modules/information/page/logic/cubit/info_about_app_cubit.dart';
 
 import '../../news.dart';
 

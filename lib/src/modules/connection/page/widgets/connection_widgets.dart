@@ -1,7 +1,9 @@
 // import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:vet_digital/src/app/theme/theme.dart';
 import 'package:vet_digital/src/app_constants/constants.dart';
+import 'package:whatsapp_unilink/whatsapp_unilink.dart';
 
 
 const string = AppString;
@@ -53,12 +55,12 @@ class AppBottomSheet {
                         AppSpace.sized20,
                         ElevatedButton(
                           onPressed: () async {
-                            // String url = 'https://telegram.me/SZHORUBAEV';
-                            // // ignore: deprecated_member_use
-                            // if (await canLaunch(url)) {
-                            //   // ignore: deprecated_member_use
-                            //   await launch(url);
-                            // }
+                            String url = 'https://telegram.me/SZHORUBAEV';
+                            // ignore: deprecated_member_use
+                            if (await canLaunch(url)) {
+                              // ignore: deprecated_member_use
+                              await launch(url);
+                            }
                           },
                           style: ElevatedButton.styleFrom(
                             //backgroundColor: AppColors.white,
@@ -84,12 +86,12 @@ class AppBottomSheet {
                         ),
                         ElevatedButton(
                           onPressed: () async {
-                            // const link = WhatsAppUnilink(
-                            //   phoneNumber: '+996778787298',
-                            //   text: 'Ассалам алайкум',
-                            // );
-                            // // ignore: deprecated_member_use
-                            // await launch('$link');
+                            const link = WhatsAppUnilink(
+                              phoneNumber: '+996778787298',
+                              text: 'Ассалам алайкум',
+                            );
+                            // ignore: deprecated_member_use
+                            await launch('$link');
                           },
                           style: ElevatedButton.styleFrom(
                             //backgroundColor: AppColors.white,

@@ -10,7 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../locator.dart';
 import '../../modules/home/home.dart';
-import '../../modules/information/page/logic/cubit/info_about_app_cubit.dart';
+import '../../modules/news/page/logic/cubit/info_about_app_cubit.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

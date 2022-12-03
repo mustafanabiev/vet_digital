@@ -7,15 +7,7 @@ abstract class InfoAboutAppState extends Equatable {
   List<Object> get props => [];
 }
 
-class LoadingInfoAboutAppState extends InfoAboutAppState {}
-
-class LoadedAboutAppState extends InfoAboutAppState {
-  const LoadedAboutAppState(this.documentName);
-  final AboutAppModel? documentName;
-
-  @override
-  List<Object> get props => [documentName!];
-}
+class LoadingState extends InfoAboutAppState {}
 
 class LoadedKatalogState extends InfoAboutAppState {
   const LoadedKatalogState(this.items);

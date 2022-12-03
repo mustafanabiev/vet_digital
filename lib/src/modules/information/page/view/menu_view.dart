@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../utils/components/components.dart';
 import '../../../../utils/enum/enums.dart';
-import '../page.dart';
+import '../../information.dart';
 import '../widgets/info_widgets.dart';
 
 class MenuView extends StatelessWidget {
