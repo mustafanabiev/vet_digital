@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../app/theme/theme.dart';
 import '../../../../app_constants/constants.dart';
-import '../../../../generated/assets.gen.dart';
 import '../../../../utils/components/components.dart';
 import '../../../news/page/logic/cubit/news_info_cubit.dart';
 import '../../data/models/vet_info_model.dart';

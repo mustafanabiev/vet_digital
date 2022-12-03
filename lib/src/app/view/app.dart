@@ -7,14 +7,31 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import '../../locator.dart';
 import '../../modules/home/home.dart';
 import '../../modules/news/page/logic/cubit/news_info_cubit.dart';
 import '../../modules/vet/page/logic/cubit/news_info_cubit.dart';
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   const App({super.key});
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  @override
+  void initState() {
+    super.initState();
+    initialize();
+  }
+
+  void initialize() async {
+    await Future.delayed(const Duration(seconds: 2));
+    FlutterNativeSplash.remove();
+  }
 
   @override
   Widget build(BuildContext context) {
