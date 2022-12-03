@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:vet_digital/src/app_constants/constants.dart';
 import 'package:vet_digital/src/generated/assets.gen.dart';
-import 'package:vet_digital/src/modules/home/data/model/katalog_model.dart';
 
 import '../../../../app/theme/theme.dart';
+import '../../../information/data/models/katalog_model.dart';
 
 class NewsDetailView extends StatelessWidget {
   const NewsDetailView({super.key, required this.newsItems});

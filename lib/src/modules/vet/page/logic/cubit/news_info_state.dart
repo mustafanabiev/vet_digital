@@ -1,4 +1,4 @@
-part of 'info_about_app_cubit.dart';
+part of 'news_info_cubit.dart';
 
 abstract class InfoAboutAppState extends Equatable {
   const InfoAboutAppState();
@@ -9,6 +9,13 @@ abstract class InfoAboutAppState extends Equatable {
 
 class LoadingState extends InfoAboutAppState {}
 
+class LoadedVetState extends InfoAboutAppState {
+  const LoadedVetState(this.items);
+  final VetInfoModel? items;
+
+  @override
+  List<Object> get props => [items!];
+}
 class LoadedKatalogState extends InfoAboutAppState {
   const LoadedKatalogState(this.items);
   final List<KatalogModel>? items;
