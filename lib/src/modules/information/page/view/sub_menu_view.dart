@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:vet_digital/src/generated/assets.gen.dart';
 
 import '../../../../app/theme/theme.dart';
+import '../../../../generated/assets.gen.dart';
 import '../../data/data.dart';
 import 'sub_menu_info.dart';
 

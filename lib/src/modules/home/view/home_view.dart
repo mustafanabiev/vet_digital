@@ -6,8 +6,8 @@ import 'package:vet_digital/src/modules/information/information.dart';
 
 import '../../../app/theme/colors/app_colors.dart';
 import '../../connection/connection.dart';
-import '../../information/page/logic/cubit/info_about_app_cubit.dart';
 import '../../news/news.dart';
+import '../../news/page/logic/cubit/info_about_app_cubit.dart';
 import '../../vet/page/page.dart';
 
 class HomePage extends StatelessWidget {
