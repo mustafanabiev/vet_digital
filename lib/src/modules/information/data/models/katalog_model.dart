@@ -7,6 +7,7 @@ class KatalogModel {
     this.title,
     this.title1,
     this.image,
+    this.audio,
   });
 
   factory KatalogModel.fromJson(Map<String, dynamic> json) {
@@ -15,10 +16,12 @@ class KatalogModel {
       title: json['title'] as String?,
       title1: json['title1'] as String?,
       image: json['image'] as String?,
+      audio: json['audio'] as String?,
     );
   }
   String? name;
   String? title;
   String? title1;
   String? image;
+  String? audio;
 }
